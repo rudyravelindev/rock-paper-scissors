@@ -8,3 +8,12 @@ function getComputerChoice(computerChoice){
 }
 
 console.log(getComputerChoice(computerChoice));
+
+// Get Human choice
+var humanChoice;
+function getHumanChoice(){
+    humanChoice = prompt("Please enter: 'rock', 'paper', 'scissors'")
+ 
+}
+getHumanChoice();
+console.log(humanChoice)
