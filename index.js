@@ -13,7 +13,7 @@ function getComputerChoice() {
   }
 }
 let computerChoice = getComputerChoice();
-console.log('This is the Computer Choice: ' + ' ' + computerChoice);
+console.log('Computer Choose: ' + ' ' + computerChoice);
 
 // Human choice
 function getHumanChoice() {
@@ -22,7 +22,28 @@ function getHumanChoice() {
 }
 let humanChoice = getHumanChoice();
 console.log('You choose: ' + ' ' + humanChoice);
-
+console.log('--------------------------------------------------------------');
 // Play Round
-function playRound(humanChoice, computerChoice) {}
+function playRound(humanChoice, computerChoice) {
+  if (humanChoice === computerChoice) {
+    return 'It is a Tie';
+  } else if (
+    (humanChoice === 'rock' && computerChoice === 'scissors') ||
+    (humanChoice === 'paper' && computerChoice === 'rock') ||
+    (humanChoice === 'scissors' && computerChoice === 'paper')
+  ) {
+    return 'Human wins';
+  } else return 'Computer wins';
+}
+let winner = playRound(humanChoice, computerChoice);
+
+if (winner === 'It is a Tie') {
+  console.log('No score changed');
+} else if (winner === 'Computer wins') {
+  computerScore++;
+} else {
+  humanScore++;
+}
+console.log('Human is: ' + humanScore, 'Computer is: ' + computerScore);
 console.log(playRound(humanChoice, computerChoice));
+console.log('--------------------------------------------------------------');
