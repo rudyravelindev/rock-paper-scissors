@@ -18,8 +18,8 @@ function playRound(humanChoice) {
     return;
   }
   let computerChoice = getComputerChoice();
-  console.log('Computer choose: ' + computerChoice);
-  console.log('You choose: ' + humanChoice);
+  // console.log('Computer choose: ' + computerChoice);
+  // console.log('You choose: ' + humanChoice);
   let resultMessage;
   if (humanChoice === computerChoice) {
     resultMessage = 'It is a Tie. No score changed';
@@ -51,7 +51,7 @@ function playRound(humanChoice) {
 
   results.append(rounds);
 
-  console.log(`Score — Human: ${humanScore}, Computer: ${computerScore}`);
+  // console.log(`Score — Human: ${humanScore}, Computer: ${computerScore}`);
 
   let winner;
   if (humanScore === 5) {
